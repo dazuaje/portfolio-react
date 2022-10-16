@@ -6,7 +6,7 @@
     &__list{  
         display: flex;
         align-items: center;
-        justify-content:space-evenly;
+        justify-content:space-around;
 
     }
     &__item--logo{
@@ -17,7 +17,6 @@
         display: flex;
         width: 45%;
         justify-content: space-between;
-        
     }
     &__item{
         list-style: none; 
