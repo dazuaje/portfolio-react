@@ -1,6 +1,7 @@
 import React from 'react';
 import djLogo from '../../Assets/djLogo.svg';
 import { Switch } from '@mui/material';
+import { Link } from 'react-scroll';
 import './Navbar.scss';
 
 const Navbar = () => {
@@ -12,11 +13,11 @@ const Navbar = () => {
 
         <div className="nav__item__container">
 
-          <li className='nav__item'><a href="#d" className="nav__item--anchor inicioLang"> Home </a></li>
-          <li className='nav__item'><a href="#q" className="nav__item--anchor sobreLang"> About me </a></li>
-          <li className='nav__item'><a href="#d" className="nav__item--anchor habilidadesLang"> Skills </a></li>
-          <li className='nav__item'><a href="#c" className="nav__item--anchor proyectosLang"> Project </a></li>
-          <li className='nav__item'><a href="#w" className="nav__item--anchor contactLang"> Contact </a></li>
+          <li className='nav__item'><Link className="nav__item--anchor inicioLang"> Home </Link></li>
+          <li className='nav__item'><Link to="AboutMe" spy={true} smooth={true} offset={50} duration={500} className="nav__item--anchor sobreLang"> About me </Link></li>
+          <li className='nav__item'><Link to="skills" spy={true} smooth={true} offset={50} duration={500} className="nav__item--anchor habilidadesLang"> Skills </Link></li>
+          <li className='nav__item'><Link className="nav__item--anchor proyectosLang"> Project </Link></li>
+          <li className='nav__item'><Link className="nav__item--anchor contactLang"> Contact </Link></li>
         </div>
 
         <Switch defaultChecked style={{ color: '#374151' }} />

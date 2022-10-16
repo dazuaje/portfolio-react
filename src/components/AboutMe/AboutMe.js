@@ -4,7 +4,7 @@ import personalPhoto from '../../Assets/personalPhoto.jpg';
 
 const AboutMe = () => {
     return (
-        <section className="aboutMe">
+        <section className="aboutMe" id='AboutMe'>
 
             <div className="aboutMe__image__container">
                 <img className="aboutMe__image" src={personalPhoto} alt="personalPhoto" />
