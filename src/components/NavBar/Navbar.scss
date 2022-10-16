@@ -1,0 +1,38 @@
+@import '../../sassStyles/variables';
+@import '../../sassStyles/typography';
+
+.nav{
+    background-color: $Cyan;
+    &__list{  
+        display: flex;
+        align-items: center;
+        justify-content:space-evenly;
+
+    }
+    &__item--logo{
+        width: 100px;
+        cursor: pointer;
+    }
+    &__item__container{
+        display: flex;
+        width: 45%;
+        justify-content: space-between;
+        
+    }
+    &__item{
+        list-style: none; 
+        cursor: pointer;
+    }
+    &__item--anchor{
+        text-decoration: none;
+        color: $White;
+        font-size: 19px;
+        font-weight: 600;
+        font-family: $SpartanFont;
+        transition: color .2s linear;
+    }
+    &__item--anchor:hover{
+        color: $Blue;
+    }
+
+}
