@@ -19,8 +19,10 @@ const Navbar = () => {
           <li className='nav__item'><Link className="nav__item--anchor proyectosLang"> Project </Link></li>
           <li className='nav__item'><Link className="nav__item--anchor contactLang"> Contact </Link></li>
         </div>
+        {/* 
+       */}
 
-        {/*<Switch defaultChecked style={{ color: '#374151' }} />*/}
+
       </ul>
 
     </nav>

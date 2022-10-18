@@ -33,5 +33,33 @@
     &__item--anchor:hover{
         color: $Blue;
     }
+    #burguer--menu{
+        display: none;
+    }
 
+}
+@media  (max-width: 768px) {
+
+    .nav{
+        &__item__container{
+            width: 70%;
+            justify-content: space-evenly;
+        }
+    }
+    #burguer--menu{
+        display: none;
+    }
+}
+@media  (max-width: 415px) {
+
+    .nav{
+        &__item__container{
+            display: none;
+        }
+    }
+    #burguer--menu{
+        display: flex;
+        border: 2px solid red;
+    }
+    
 }

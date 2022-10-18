@@ -50,3 +50,28 @@
         height: 600px;
     }
 }
+
+@media  (max-width: 768px) {
+    
+
+  .home{
+
+      &__content{
+          border: 2px solid red;
+            width: 50%;
+            height: 50%;
+        }
+        &__homeImage{
+            border: 2px solid red;
+            width: 50%;
+            height: 50%;
+        }
+    }
+}
+    /*
+        */
+        
+@media  (max-width: 415px) {
+
+    
+}
