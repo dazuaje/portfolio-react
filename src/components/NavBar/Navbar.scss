@@ -1,65 +1,59 @@
-@import '../../sassStyles/variables';
-@import '../../sassStyles/typography';
+@import "../../sassStyles/variables";
+@import "../../sassStyles/typography";
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Mukta&display=swap");
 
-.nav{
+.nav {
+  background-color: $Cyan;
+  display: flex;
+  height: 60px;
+  justify-content: space-around;
+
+  &__list {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__item__container {
+    display: none;
+  }
+
+  &__item__container.active {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
     background-color: $Cyan;
-    &__list{  
-        display: flex;
-        align-items: center;
-        justify-content:space-around;
-
-    }
-    &__item--logo{
-        width: 100px;
-        cursor: pointer;
-    }
-    &__item__container{
-        display: flex;
-        width: 45%;
-        justify-content: space-between;
-    }
-    &__item{
-        list-style: none; 
-        cursor: pointer;
-    }
-    &__item--anchor{
-        text-decoration: none;
-        color: $White;
-        font-size: 20px;
-        font-weight: 600;
-        font-family: $SpartanFont;
-        transition: color .2s linear;
-    }
-    &__item--anchor:hover{
-        color: $Blue;
-    }
-    #burguer--menu{
-        display: none;
-    }
-
+    width: 97.5vw;
+    height: 95%;
+    justify-content: center;
+    align-items: center;
+    top: 3em; //1.7
+    transform: translateX(0px);
+  }
+  &__item {
+    list-style: none;
+    margin: 2rem 10px;
+  }
+  &__item--anchor {
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+  }
 }
-@media  (max-width: 768px) {
 
-    .nav{
-        &__item__container{
-            width: 70%;
-            justify-content: space-evenly;
-        }
+@media screen and (min-width: 600px) {
+  .nav {
+    background-color: yellow;
+    &__item__container {
+      display: flex;
+      width: 45rem; //700px
     }
-    #burguer--menu{
-        display: none;
+    &__item {
+      border: 2px solid red;
     }
-}
-@media  (max-width: 415px) {
-
-    .nav{
-        &__item__container{
-            display: none;
-        }
-    }
-    #burguer--menu{
-        display: flex;
-        border: 2px solid red;
-    }
-    
+  }
+  .burgerIcon {
+    display: none;
+  }
 }

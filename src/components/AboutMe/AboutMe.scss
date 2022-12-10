@@ -60,3 +60,28 @@
 
 
 }
+@media (max-width: 768px){
+    .aboutMe{
+        &__image__container{
+            width: 100%;
+        }
+        &__image{
+            width: 300px;
+            height: 300px;
+        }
+        &__content__container{
+            width: 100%;
+        }
+        &__content--description{
+          width: 300px;
+        }
+    }
+}
+@media (max-width: 1025px){
+    .aboutMe{
+
+flex-direction: column;
+
+    
+    }
+}

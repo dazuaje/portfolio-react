@@ -4,10 +4,20 @@
   box-sizing: border-box;
   font-family: "League Spartan", sans-serif;
 }
-
+/*
+@media (max-width:1025px){
+  body{
+    width: 1025px;
+  }
+}
 @media (max-width: 768px) {
   body {
     width: 768px;
+  }
+}
+@media (max-width: 600px){
+  body {
+    width: 600px;
   }
 }
 
@@ -22,3 +32,4 @@
     width: 320px;
   }
 }
+*/

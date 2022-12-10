@@ -1,17 +1,19 @@
 @import '../../sassStyles/variables';
 
-.skills{
+.skills {
     height: 100vh;
     padding-top: 20px;
     background-color: $White;
-    &--title{
+
+    &--title {
         text-align: center;
         margin: 40px 0px 20px 0;
         font-size: 40px;
         letter-spacing: 4px;
         color: $Blue;
     }
-    &__logo__container{
+
+    &__logo__container {
         justify-content: center;
         align-items: center;
         margin: auto;
@@ -21,7 +23,8 @@
         height: 170px;
         margin-top: 20px;
     }
-    &__logo__card{
+
+    &__logo__card {
         //border: 2px solid $Cyan;
         box-shadow: 0 4px 10px rgba(14, 49, 40, 0.15);
         height: 120px;
@@ -30,17 +33,19 @@
         border-radius: 20px;
         transition: transform .6s linear;
     }
-    &__logo{
+
+    &__logo {
         margin-top: 50px;
         width: 70px;
         height: 70px;
         margin: 5px 35px;
         cursor: pointer;
-    
-     //   filter: grayscale(100%);
+
+        //   filter: grayscale(100%);
         transition: filter 0.3s ease-in-out;
     }
-    &--description{
+
+    &--description {
         display: flex;
         justify-content: center;
         margin-top: 5px;
@@ -49,30 +54,22 @@
         text-align: center;
     }
 }
-.skills__logo__card:hover .skills__logo{
+
+.skills__logo__card:hover .skills__logo {
     filter: grayscale(0);
 }
-.skills__logo__card:hover{
+
+.skills__logo__card:hover {
     transform: translateY(-10px);
     cursor: pointer;
 }
 
 
+@media (max-width:1025px) {
+    .skills__logo__card {
 
+        height: 10px;
+        width: 120px;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
+}

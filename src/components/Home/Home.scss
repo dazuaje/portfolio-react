@@ -1,77 +1,86 @@
 @import '../../sassStyles/variables';
-.home{
+
+.home {
     height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    &__content{
-        padding-top:100px;
+
+    &__content {
+        padding-top: 00px;
         width: 50%;
         padding-left: 70px;
     }
-    &__content--greeting{
-        font-size: 24px;
+
+    &__content--greeting {
+        font-size: 34px;
         color: $Blue;
     }
-    &__content--name{
+
+    &__content--name {
         color: $Cyan;
-        font-size: 45px;
+        font-size: 55px;
         margin-top: 20px;
     }
-    &__content--jobPosition{
+
+    &__content--jobPosition {
         color: $Blue;
         font-weight: bold;
-        font-size: 24px;
+        font-size: 34px;
         margin: 20px 0;
     }
-    &__content--cta{
-            padding: 20px 0;
-            border-radius: 10px;
-            margin-top: 20px;
-            width: 200px;
-            background-color: $Cyan;
-            color: $White;
-            font-weight: 600;
-            font-size: 23px;
-            border: none;
-            box-shadow: inset 0 0 0 0 $Blue;
-            transition:cubic-bezier(0.215, 0.610, 0.355, 1) 0.3s;      
-        }
-        &__content--cta:hover{
-            box-shadow: inset 0 100px 0 0 $Blue ;
-        }
-    &__homeImage{
+
+    &__content--cta {
+        padding: 20px 40px;
+        border-radius: 10px;
+        margin-top: 20px;
+        width: 250px;
+        background-color: $Cyan;
+        color: $White;
+        font-weight: 600;
+        font-size: 30px;
+        border: none;
+        box-shadow: inset 0 0 0 0 $Blue;
+        transition: cubic-bezier(0.215, 0.610, 0.355, 1) 0.3s;
+    }
+
+    &__content--cta:hover {
+        box-shadow: inset 0 100px 0 0 $Blue ;
+    }
+
+    &__homeImage {
         height: 100%;
         width: 50%;
+        text-align: center;
     }
-    &__homeImage--image{
-        padding-left:50px;
-        width: 600px;
-        height: 600px;
+
+    &__homeImage--image {
+        padding-left: 50px;
+        width: 700px;
+        height: 700px;
     }
 }
 
-@media  (max-width: 768px) {
-    
+@media (max-width: 768px) {
 
-  .home{
 
-      &__content{
-          border: 2px solid red;
+    .home {
+
+        &__content {
+
             width: 50%;
             height: 50%;
         }
-        &__homeImage{
-            border: 2px solid red;
+
+        &__homeImage {
+
             width: 50%;
             height: 50%;
         }
     }
 }
-    /*
+
+/*
         */
-        
-@media  (max-width: 415px) {
 
-    
-}
+@media (max-width: 415px) {}
