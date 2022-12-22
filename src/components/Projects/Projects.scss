@@ -1,0 +1,133 @@
+@import "../../sassStyles/variables";
+@import "../../sassStyles/mixins";
+
+.projects {
+  height: 400vh;
+  background-color: $Blue;
+  &--title {
+    color: $White;
+    text-align: center;
+  }
+  &__container {
+    @include FlexCenter();
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 20px;
+  }
+  &__container__card {
+    background-color: $White;
+    border-radius: 20px;
+    width: 100%;
+    height: 500px;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__card--image {
+    width: 100%;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__card--title {
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: $Blue;
+    // margin: 20px 0;
+  }
+  &__card--p {
+    text-align: justify;
+    margin: 0px 20px;
+    font-size: 1rem;
+    line-height: 20px;
+  }
+  &__container__buttons {
+    @include FlexCenter();
+    //margin: 20px;
+  }
+  &__buttons__wrapper {
+    @include FlexCenter();
+    border: 2px solid $Cyan;
+    margin: 0 10px;
+    padding: 5px 20px;
+    border-radius: 10px;
+  }
+  .gitContainer {
+    background-color: $Cyan;
+  }
+  .gitIcon,
+  .gitBtn {
+    color: $White;
+  }
+
+  &__button--icon {
+    font-size: 100%;
+    margin: 6px auto;
+    display: block;
+    color: $Cyan;
+  }
+  &--button {
+    border: none;
+    background-color: transparent;
+  }
+
+  &__container__technologies {
+    @include FlexCenter();
+  }
+  &__technologies--images {
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    filter: grayscale(100);
+    transition: filter 1s;
+  }
+  &__technologies--images:hover {
+    filter: grayscale(0);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .projects {
+    height: 110vh;
+    //  @include FlexCenter();
+    &--title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    &__container {
+      flex-wrap: nowrap;
+      gap: 10px;
+      width: 100%;
+    }
+    &__container__card {
+      width: 280px;
+      height: 500px;
+      transition: transform 2s;
+    }
+    &__card__image__wrapper {
+      width: 100%;
+      height: 140px;
+    }
+    &__card--image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    &__card--p {
+      //margin-top: 40px;
+    }
+    &__container__card:hover {
+      transform: translateY(-50px);
+    }
+  }
+}

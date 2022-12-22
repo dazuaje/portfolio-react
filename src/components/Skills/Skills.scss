@@ -1,75 +1,72 @@
-@import '../../sassStyles/variables';
+@import "../../sassStyles/variables";
+@import "../../sassStyles/mixins";
 
 .skills {
-    height: 100vh;
-    padding-top: 20px;
-    background-color: $White;
+  height: 100%;
+  &--title {
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    color: $Blue;
+    padding: 20px;
+  }
+  &__logo__container {
+    @include FlexCenter();
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+  }
 
-    &--title {
-        text-align: center;
-        margin: 40px 0px 20px 0;
-        font-size: 40px;
-        letter-spacing: 4px;
-        color: $Blue;
-    }
+  &__logo {
+    width: 4rem; //70px
+    height: 4rem;
+    cursor: pointer;
+    margin: 10px 0;
+  }
+  &__logo__card__wrapper {
+    flex: 1 1 30%;
+    border: 2px solid transparent;
+  }
 
-    &__logo__container {
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        flex-wrap: wrap;
-        display: flex;
-        width: 90vw;
-        height: 170px;
-        margin-top: 20px;
-    }
+  &__logo__card {
+    box-shadow: 0 4px 10px rgba(14, 49, 40, 0.15);
+    height: 120px;
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 20px;
+    transition: transform 0.6s linear;
+  }
+  &--description{
+    font-size: 14px;
+  }
 
-    &__logo__card {
-        //border: 2px solid $Cyan;
-        box-shadow: 0 4px 10px rgba(14, 49, 40, 0.15);
-        height: 120px;
-        width: 140px;
-        margin-left: 20px;
-        border-radius: 20px;
-        transition: transform .6s linear;
-    }
-
-    &__logo {
-        margin-top: 50px;
-        width: 70px;
-        height: 70px;
-        margin: 5px 35px;
-        cursor: pointer;
-
-        //   filter: grayscale(100%);
-        transition: filter 0.3s ease-in-out;
-    }
-
-    &--description {
-        display: flex;
-        justify-content: center;
-        margin-top: 5px;
-        color: #686262;
-        font-weight: 700;
-        text-align: center;
-    }
-}
-
-.skills__logo__card:hover .skills__logo {
-    filter: grayscale(0);
-}
-
-.skills__logo__card:hover {
+  &__logo__card:hover {
     transform: translateY(-10px);
     cursor: pointer;
+  }
 }
+@media screen and (min-width: 750px) {
+  .skills {
+    height: 100vh;
+    flex-direction: column;
+    @include FlexCenter();
 
-
-@media (max-width:1025px) {
-    .skills__logo__card {
-
-        height: 10px;
-        width: 120px;
-
+    &--title {
+      padding-top: 60px;
     }
+    &__logo__container {
+      height: 200px;
+      padding-top: 0;
+    }
+    &__logo__card {
+      width: 130px;
+    }
+    &--description {
+      display: block;
+    }
+    &__logo__card__wrapper {
+      flex: 0;
+      margin: 0 20px;
+    }
+  }
 }

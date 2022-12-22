@@ -1,15 +1,96 @@
-.contact{
-margin: 0 auto;
-width: 100%;
-text-align: center;
-background-color: green;
-}
-.contact__form__section{
+@import "../../sassStyles/variables";
+@import "../../sassStyles/mixins";
+.contact {
+  margin: 0 auto;
+  text-align: center;
+  color: $Blue;
+  padding: 20px;
+  background-color: $White;
+  &--title {
+    text-align: center;
+    margin: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  &--description {
+    text-align: center;
+    margin: 0 20px;
+  }
+
+  &__form__section {
     display: flex;
+    flex-direction: column;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__form__name__container,
+  &__form__email__container,
+  &__form__message__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 20px;
+  }
+  &__form__name--input,
+  &__form__email--input,
+  &__form__message--input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 2px solid $Cyan;
+  }
+
+  
+  &--send {
+    width: 225px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: $Cyan;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    color: $White;
+  }
+  .icon {
+    font-size: 25px;
+    color: $Blue;
+    transition: color 0.5s;
+  }
+  .icon:hover {
+    color: $Cyan;
+  }
+
+  &__info__section {
+    margin-top: 50px;
+    color: $Blue;
+  }
+  &--text {
+    margin: 10px;
+  }
 }
-@media  screen and (min-width: 1000px) {
-    .contact{
-        background-color: red;
+
+@media screen and (min-width: 600px) {
+  .contact {
+    &__form {
+      margin: auto;
+      width: 50%;
     }
-    
+    &--send {
+      margin-top: 10px;
+    }
+    &--text {
+      margin: 10px;
+    }
+    .icon {
+      font-size: 35px;
+      margin: 0 5px;
+    }
+  }
 }
