@@ -14,7 +14,7 @@ const Project = ({
     return (
         <div className="projects__container__card">
             <div className="projects__card__image__wrapper">
-                <img className="projects__card--image" src={mainImage} alt="" srcset="" />
+                <img className="projects__card--image" src={mainImage} alt={title} />
             </div>
             <h3 className="projects__card--title">{title}</h3>
             <p className="projects__card--p">{description}</p>
@@ -38,6 +38,7 @@ const Project = ({
             <div className="projects__container__technologies">
                 {technologies.map((tech) => (
                     <img
+                        key={tech}
                         className="projects__technologies--images"
                         src={tech}
                         alt={tech.toString()}

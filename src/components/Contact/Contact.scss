@@ -43,7 +43,12 @@
     border-radius: 5px;
     border: 2px solid $Cyan;
   }
+  &__form__name--input:focus,
+  &__form__email--input:focus,
+  &__form__message--input:focus{
+    outline: none;
 
+  }
   
   &--send {
     width: 225px;

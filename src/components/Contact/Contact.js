@@ -14,25 +14,24 @@ const Contact = () => {
       .then((result) => {
         console.log(result.text);
         e.target.reset();
-       toast.success("Susscessfull")
+       toast.success("Successfull");
       }, (error) => {
         console.log(error.text);
-        toast.error("Wrong")
+        toast.error("Wrong");
       });
   }
   return (
-    <section className="contact">
+    <section className="contact" id="contactMe">
+      <Toaster position="top-center"/>
       
-      <Toaster position="top-center"
-      />
 
       
-      <div className="contact--title" onClick={toast.success("Success")}>Contact Me</div>
+      <div className="contact--title">Contact Me</div>
 
       <div className="contact__form__section">
         <form ref={form} onSubmit={sendEmail} id="form" className="contact__form">
           <div className="contact__form__name__container">
-            <label className="contact__form__name--label" for="name">
+            <label className="contact__form__name--label" htmlFor="name">
               Name:
             </label>
             <input
@@ -45,7 +44,7 @@ const Contact = () => {
           </div>
 
           <div className="contact__form__email__container">
-            <label className="contact__form__email--label" for="email">
+            <label className="contact__form__email--label" htmlFor="email">
               Email:
             </label>
             <input
@@ -58,7 +57,7 @@ const Contact = () => {
           </div>
 
           <div className="contact__form__message__container">
-            <label className="contact__form__message--label" for="message">
+            <label className="contact__form__message--label" htmlFor="message">
               Message:
             </label>
             <textarea
@@ -77,7 +76,7 @@ const Contact = () => {
           </button>
         </form>
 
-        <div class="contact__info__section">
+        <div className="contact__info__section">
           <div className="contact__info__icon">
             <a
               href="https://github.com/dazuaje"
@@ -104,10 +103,10 @@ const Contact = () => {
             </a>
           </div>
 
-          <div class="contact--text gmail">Portfolio</div>
-          <div class="contact--text place">Buenos Aires, Argentina</div>
+          <div className="contact--text gmail">Portfolio</div>
+          <div className="contact--text place">Buenos Aires, Argentina</div>
 
-          <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+          <div className="copyright">&copy; All of the rights reserved</div>
         </div>
       </div>
     </section>

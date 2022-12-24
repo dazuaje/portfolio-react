@@ -4,7 +4,7 @@ const Skill = ({word, logo}) => {
         <div className="skills__logo__card__wrapper">
             <div className="skills__logo__card">
                 <img className="skills__logo" src={logo} alt={logo.toString()} />
-                <h8 className="skills--description">{word}</h8>
+                <h5 className="skills--description">{word}</h5>
             </div>
         </div>
     )

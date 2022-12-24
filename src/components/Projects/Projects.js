@@ -12,11 +12,9 @@ const { htmlLogo, cssLogo, jsLogo, sassLogo, reactLogo, materialUI} = images;
 
 const Projects = () => {
     return (
-        <section className="projects">
+        <section className="projects" id="projects">
                 <h4 className="projects--title">Projects</h4>
             <div className="projects__container">
-                {/*
-           */}
                 <Project
                     mainImage={shoesShop}
                     title="Shoes Shop"

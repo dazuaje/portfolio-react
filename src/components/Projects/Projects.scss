@@ -2,10 +2,13 @@
 @import "../../sassStyles/mixins";
 
 .projects {
-  height: 400vh;
+  //height: 100; //400
   background-color: $Blue;
+  padding-bottom: 50px;
   &--title {
     color: $White;
+    padding: 40px;
+    font-size: 1.5rem;
     text-align: center;
   }
   &__container {
